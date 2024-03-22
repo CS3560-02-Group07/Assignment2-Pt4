@@ -11,7 +11,6 @@ public class Shipment {
 	// Shipment constructor
 	public Shipment(int shipmentID, String shippingMethod, int trackingInformation, String status,
 			double shippingCost) {
-		super();
 		this.shipmentID = shipmentID;
 		this.shippingMethod = shippingMethod;
 		this.trackingInformation = trackingInformation;

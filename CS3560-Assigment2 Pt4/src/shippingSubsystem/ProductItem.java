@@ -13,7 +13,6 @@ public class ProductItem {
 	// ProductItem constructor
 	public ProductItem(int itemID, String name, String type, double price, String itemDescription, String manufacturer,
 			String supplier) {
-		super();
 		this.itemID = itemID;
 		this.name = name;
 		this.type = type;

@@ -8,13 +8,12 @@ public class Carrier {
 	
 	// Carrier constructor
 	public Carrier(int carrierID, int phoneNumber, String emailAddress) {
-		super();
 		this.carrierID = carrierID;
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
 	}
 	
-	// Getters and setters for Carrier class attribtues
+	// Getters and setters for Carrier class attributes
 	public int getCarrierID() {
 		return carrierID;
 	}
@@ -36,7 +35,7 @@ public class Carrier {
 	
 	/*
 	 * Possible methods:
-	 * add Carrier
-	 * remove Carrier
+	 * addCarrier
+	 * removeCarrier
 	 */
 }

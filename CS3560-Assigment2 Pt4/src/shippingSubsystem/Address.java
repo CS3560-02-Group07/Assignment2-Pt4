@@ -10,7 +10,6 @@ public class Address{
 	
 	// Address constructor
 	public Address(String street, String city, String state, int zipcode, String country) {
-		super();
 		this.street = street;
 		this.city = city;
 		this.state = state;
