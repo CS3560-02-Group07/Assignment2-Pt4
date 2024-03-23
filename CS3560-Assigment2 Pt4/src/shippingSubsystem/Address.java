@@ -60,7 +60,7 @@ public class Address{
 	
 	/*
 	 * Possible methods:
-	 * addAddress //add address from the customer
+	 * addAddress
 	 */
 	public void removeAddress() {
 		this.street = null;
