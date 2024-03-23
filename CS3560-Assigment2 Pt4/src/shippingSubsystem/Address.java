@@ -69,4 +69,5 @@ public class Address{
 		this.zipcode = null;
 		this.country = null;
 		System.out.println("Address removed successfully.");
+	}
 }
