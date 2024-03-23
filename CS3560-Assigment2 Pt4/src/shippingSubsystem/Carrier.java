@@ -42,4 +42,5 @@ public class Carrier {
 		this.phoneNumber = null;
 		this.emailAddress = null;
 		System.out.println("Carrier removed successfully.");
+	}
 }
