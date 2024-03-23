@@ -64,13 +64,14 @@ public class Package {
 	
 	/*
 	 * Possible methods:
-	 * getPackageInfo
 	 * setDelivery
 	 */
 	public void getPackageInfo() {
 		System.out.println("Package ID: " + getPackageID());
 		System.out.println("Weight" + getWeight() + "lbs");
 		displaySize();
-		
+		System.out.println("Status: " + getStatus());
+		System.out.println("Destination: " + getDestination());
+		System.out.println("Pickup location: " + getPickupLocation());
 	}
 }
