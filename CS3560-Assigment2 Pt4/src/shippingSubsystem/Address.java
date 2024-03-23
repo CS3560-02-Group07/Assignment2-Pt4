@@ -60,7 +60,13 @@ public class Address{
 	
 	/*
 	 * Possible methods:
-	 * addAddress
-	 * removeAddress
+	 * addAddress //add address from the customer
 	 */
+	public void removeAddress() {
+		this.street = null;
+		this.city = null;
+		this.state = null;
+		this.zipcode = null;
+		this.country = null;
+		System.out.println("Address removed successfully.");
 }
