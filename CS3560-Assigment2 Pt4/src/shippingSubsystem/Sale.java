@@ -70,13 +70,25 @@ public class Sale {
 	
 	/*
 	 * Possible methods: 
-	 * receipt
-	 * calculateTax
-	 * calculateTotalAmount
 	 * lookupOrder
 	 * archiveOrder
 	 * returnRequest
 	 * refundRequest
 	 * cancelOrder
 	 */
+	public void receipt() {
+		System.out.println("Order number: " + getOrderNumber());
+		System.out.println("Sale Date: " + getSaleDate());
+		System.out.println("Sale Time: " + getSaleTime());
+		System.out.println("Tax: " + getTax());
+		System.out.println("Tax Amount: " + calculateTax());
+		System.out.println("Total Amount: " + getTotalAmount());
+		System.out.println("Total Amount After Tax: " + calculateTotalAmount());
+	}
+	public double calculateTax() {
+		return getTax() * getTotalAmount();
+	}
+	public double calculateTotalAmount() {
+		return calculateTax() + getTotalAmount();
+	}
 }
