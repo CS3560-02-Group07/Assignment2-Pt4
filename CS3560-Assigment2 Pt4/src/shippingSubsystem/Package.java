@@ -38,6 +38,11 @@ public class Package {
 	public void setSize(double[] size) {
 		this.size = size;
 	}
+	public void displaySize(double[] size) {
+		System.out.println("Length: " + size[0]);
+		System.out.println("Width: " + size[1]);
+		System.out.println("Height: " + size[2]);
+	}
 	public String getStatus() {
 		return status;
 	}
@@ -62,4 +67,10 @@ public class Package {
 	 * getPackageInfo
 	 * setDelivery
 	 */
+	public void getPackageInfo() {
+		System.out.println("Package ID: " + getPackageID());
+		System.out.println("Weight" + getWeight() + "lbs");
+		displaySize();
+		
+	}
 }
