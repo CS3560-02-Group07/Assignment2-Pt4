@@ -36,6 +36,10 @@ public class Carrier {
 	/*
 	 * Possible methods:
 	 * addCarrier
-	 * removeCarrier
 	 */
+	public void removeCarrier() {
+		this.carrierID = null;
+		this.phoneNumber = null;
+		this.emailAddress = null;
+		System.out.println("Carrier removed successfully.");
 }
