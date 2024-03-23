@@ -69,7 +69,28 @@ public class ProductItem {
 	/*
 	 * Possible methods:
 	 * addProductItem
-	 * removeProductItem
-	 * lookupItem
 	 */
+	public void removeProductItem() {
+		this.itemID = null;
+		this.name = null;
+		this.type = null;
+		this.price = null;
+		this.itemDescription = null;
+		this.manufacturer = null;
+		this.supplier = null;
+	}
+	public void lookupItem(int itemID) {
+		if (itemID == null) {
+			System.out.println("Item does not exist.");
+		}
+		else {
+			System.out.println("Item ID: " + getItemID());
+			System.out.println("Name: " + getName());
+			System.out.println("Type: " + getType());
+			System.out.println("Price: " + getPrice());
+			System.out.println("Item Description: " + getItemDescription());
+			System.out.println("Manufacturer: " + getManufacturer());
+			System.out.println("Supplier: " + getSupplier());
+		}
+	}
 }
