@@ -2,16 +2,16 @@ package shippingSubsystem;
 
 public class PickupLocation {
 	// Attributes of PickupLocation class
-	private Integer warehouseID;
+	private int warehouseID;
 	private String manufacturer;
 	private String street;
 	private String city;
 	private String state;
-	private Integer zipcode;
+	private int zipcode;
 	private String country;
 	
 	// Constructor for PickupLocation
-	public PickupLocation(Integer warehouseID, String manufacturer, String street, String city, String state, Integer zipcode, String country) {
+	public PickupLocation(int warehouseID, String manufacturer, String street, String city, String state, int zipcode, String country) {
 		this.warehouseID = warehouseID;
 		this.manufacturer = manufacturer;
 		this.street = street;
@@ -25,7 +25,7 @@ public class PickupLocation {
 	public Integer getWarehouseID() {
 		return warehouseID;
 	}
-	public void setWarehouseID(Integer warehouseID) {
+	public void setWarehouseID(int warehouseID) {
 		this.warehouseID = warehouseID;
 	}
 	public String getManufacturer() {
@@ -52,10 +52,10 @@ public class PickupLocation {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public Integer getZipcode() {
+	public int getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(Integer zipcode) {
+	public void setZipcode(int zipcode) {
 		this.zipcode = zipcode;
 	}
 	public String getCountry() {
@@ -71,17 +71,17 @@ public class PickupLocation {
 	 */
 	// removePickupLocation method
 	public void removePickupLocation() {
-		this.warehouseID = null;
+		this.warehouseID = 0;
 		this.manufacturer = null;
 		this.street = null;
 		this.city = null;
 		this.state = null;
-		this.zipcode = null;
+		this.zipcode = 0;
 		this.country = null;
 	}
 	// lookupPickupLocation
 	public void lookupPickupLocation(Integer warehouseID) {
-		if (warehouseID == null) {
+		if (warehouseID == 0) {
 			System.out.println("Item does not exist.");
 		}
 		else {
