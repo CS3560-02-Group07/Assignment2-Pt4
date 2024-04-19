@@ -107,8 +107,13 @@ CREATE TABLE IF NOT EXISTS PickupLocation (
 SELECT * FROM PickupLocation;
 
 INSERT INTO Manufacturer VALUES ('100001', 'Sports Inc.'),
-								('100002', 'Orange');
+								('100002', 'Orange'),
+                                ('100003', 'Out-N-In'),
+                                ('100004', 'Average Value'),
+                                ('100005', 'Slaugher House');
 
 INSERT INTO ProductItem VALUES ('300001', 'Aqua Flask 32 oz', 'water bottle', 'Stainless steel, insulated, refillable, reusable 32 oz water bottle.', '100001', 'available'), 
 								('300002', 'ePhone 20', 'smartphone', 'ePhone 20 is forged in titanium and features the groundbreaking O42 Pro chip, USB C, and the most powerful ePhone camera system ever.', '100002', 'available'),
-                                ('300003', 'PacBook Oxygen', 'laptop', 'Supercharged by the next-gen N2 chip, the redesign combines incredible performance and up to 19 hours of battery life.', '100002', 'available');
+                                ('300003', 'PacBook Oxygen', 'laptop', 'Supercharged by the next-gen N2 chip, the redesign combines incredible performance and up to 19 hours of battery life.', '100002', 'available'),
+                                ('300004', 'Breeze Michaels', 'tennis shoes', 'The Breeze Michael remakes the classic sneaker, giving you a fresh look with a familiar feel.', '100001', 'available'),
+                                ('300005', 'BBQ Grill', 'cookware', 'With smoker and charcoal grill, you can experience grilled and smoked meats at the same time.', '100003', 'available');
