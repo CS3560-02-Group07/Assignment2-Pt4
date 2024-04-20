@@ -112,6 +112,11 @@ INSERT INTO CustomerAddress VALUES (000840, 000001, 'Isabelle Ave', 'Eugene', 'O
                                     (000077, 000005, 'Friday Ave', 'Fargo', 'ND', '56128', 'United States'),
                                     (004701, 000006, 'Purnell St', 'Ocean City', 'MD', '79951', 'United States');
 
+INSERT INTO ShippingMethod VALUES (0, 'Overnight/Same Day', 12.50),
+									(1, '2-Day', 9.50),
+                                    (2, '4-Day', 6.50),
+                                    (3, '5-7 Days', 1.00);
+
 INSERT INTO Manufacturer VALUES ('100001', 'Sports Inc.'),
 								('100002', 'Orange'),
                                 ('100003', 'Out-N-In'),
