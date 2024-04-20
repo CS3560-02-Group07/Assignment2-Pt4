@@ -191,6 +191,7 @@ public class confirmationWindow extends javax.swing.JFrame {
                 + "Customer has been notified about the delivery ");
         new Delivery().setVisible(true);
         dispose(); 
+        
                 
  
     }//GEN-LAST:event_okButtonActionPerformed
