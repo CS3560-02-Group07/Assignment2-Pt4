@@ -98,6 +98,13 @@ CREATE TABLE IF NOT EXISTS PickupLocation (
 		REFERENCES Manufacturer (manufacturerID)
 );
 
+INSERT INTO Customer VALUES (000001, 'John', 'Benson', '123-123-1234', 'JBenson@email.com'),
+							(000002, 'Ellen', 'Gray', '839-232-9381', 'EllGray@email.com'),
+                            (000003, 'Randy', 'Smith', '928-849-2847', 'RandySmith@email.com'),
+                            (000004, 'Amy', 'Harris', '293-200-9000', 'AmyHarris@email.com'),
+                            (000005, 'Jane', 'Rhodes', '909-394-8003', 'JaRhodes@email.com'),
+                            (000006, 'Adam', 'James', '838-943-3902', 'AdamJames@email.com');
+
 INSERT INTO Manufacturer VALUES ('100001', 'Sports Inc.'),
 								('100002', 'Orange'),
                                 ('100003', 'Out-N-In'),
