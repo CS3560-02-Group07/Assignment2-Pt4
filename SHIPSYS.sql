@@ -98,19 +98,19 @@ CREATE TABLE IF NOT EXISTS PickupLocation (
 		REFERENCES Manufacturer (manufacturerID)
 );
 
-INSERT INTO Customer VALUES (000001, 'John', 'Benson', '123-123-1234', 'JBenson@email.com'),
-							(000002, 'Ellen', 'Gray', '839-232-9381', 'EllGray@email.com'),
-                            (000003, 'Randy', 'Smith', '928-849-2847', 'RandySmith@email.com'),
-                            (000004, 'Amy', 'Harris', '293-200-9000', 'AmyHarris@email.com'),
-                            (000005, 'Jane', 'Rhodes', '909-394-8003', 'JaRhodes@email.com'),
-                            (000006, 'Adam', 'James', '838-943-3902', 'AdamJames@email.com');
+INSERT INTO Customer VALUES (000405, 'John', 'Benson', '123-123-1234', 'JBenson@email.com'),
+							(002002, 'Ellen', 'Gray', '839-232-9381', 'EllGray@email.com'),
+                            (002003, 'Randy', 'Smith', '928-849-2847', 'RandySmith@email.com'),
+                            (054004, 'Amy', 'Harris', '293-200-9000', 'AmyHarris@email.com'),
+                            (000505, 'Jane', 'Rhodes', '909-394-8003', 'JaRhodes@email.com'),
+                            (003006, 'Adam', 'James', '838-943-3902', 'AdamJames@email.com');
 
-INSERT INTO CustomerAddress VALUES (000840, 000001, 'Isabelle Ave', 'Eugene', 'OR', '12345', 'United States'),
-									(000120, 000002, 'Riverview Ct', 'Tacoma', 'WA', '54321', 'United States'),
-                                    (000021, 000003, 'Country Club St', 'Sacramento', 'CA', '24315', 'United States'),
-                                    (000087, 000004, 'Random St', 'Harrisburg', 'PA', '84135', 'United States'),
-                                    (000077, 000005, 'Friday Ave', 'Fargo', 'ND', '56128', 'United States'),
-                                    (004701, 000006, 'Purnell St', 'Ocean City', 'MD', '79951', 'United States');
+INSERT INTO CustomerAddress VALUES (000840, 000405, 'Isabelle Ave', 'Eugene', 'OR', '12345', 'United States'),
+									(000120, 002002, 'Riverview Ct', 'Tacoma', 'WA', '54321', 'United States'),
+                                    (000021, 002003, 'Country Club St', 'Sacramento', 'CA', '24315', 'United States'),
+                                    (000087, 054004, 'Random St', 'Harrisburg', 'PA', '84135', 'United States'),
+                                    (000077, 000505, 'Friday Ave', 'Fargo', 'ND', '56128', 'United States'),
+                                    (004701, 003006, 'Purnell St', 'Ocean City', 'MD', '79951', 'United States');
 
 INSERT INTO ShippingMethod VALUES (0, 'Overnight/Same Day', 12.50),
 									(1, '2-Day', 9.50),
