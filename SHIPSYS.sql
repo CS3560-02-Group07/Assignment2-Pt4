@@ -5,12 +5,10 @@ CREATE TABLE IF NOT EXISTS Customer (
 	customerID INT,
     f_name VARCHAR (15),
     l_name VARCHAR (15),
-    phoneNumber INT,
+    phoneNumber VARCHAR(13),
     emailAddress VARCHAR(30),
     PRIMARY KEY (customerID)
 );
-
-SELECT * FROM Customer;
 
 CREATE TABLE IF NOT EXISTS CustomerAddress (
 	addressID INT,
@@ -25,8 +23,6 @@ CREATE TABLE IF NOT EXISTS CustomerAddress (
 	PRIMARY KEY (addressID)
 );
 
-SELECT * FROM CustomerAddress;
-
 CREATE TABLE IF NOT EXISTS Manufacturer (
 	manufacturerID INT,
     manufacturerName VARCHAR(20),
@@ -38,8 +34,6 @@ CREATE TABLE IF NOT EXISTS ShippingMethod (
     shipMethod VARCHAR(15),
     PRIMARY KEY (shipID)
 );
-
-SELECT * FROM ShippingMethod;
 
 CREATE TABLE IF NOT EXISTS Sale (
 	orderNumber INT,
@@ -103,8 +97,6 @@ CREATE TABLE IF NOT EXISTS PickupLocation (
     FOREIGN KEY (manufacturerID)
 		REFERENCES Manufacturer (manufacturerID)
 );
-
-SELECT * FROM PickupLocation;
 
 INSERT INTO Manufacturer VALUES ('100001', 'Sports Inc.'),
 								('100002', 'Orange'),
