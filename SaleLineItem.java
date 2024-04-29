@@ -1,10 +1,10 @@
 public class SaleLineItem {
     private int quantity;
-    private String orderNumber;
-    private String itemID;
+    private int orderNumber;
+    private int itemID;
 
     // Constructor
-    public SaleLineItem(int quantity, String orderNumber, String itemID) {
+    public SaleLineItem(int quantity, int orderNumber, int itemID) {
         this.quantity = quantity;
         this.orderNumber = orderNumber;
         this.itemID = itemID;
@@ -19,19 +19,19 @@ public class SaleLineItem {
         this.quantity = quantity;
     }
 
-    public String getOrderNumber() {
+    public int getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrderNumber(String orderNumber) {
+    public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
     }
 
-    public String getItemID() {
+    public int getItemID() {
         return itemID;
     }
 
-    public void setItemID(String itemID) {
+    public void setItemID(int itemID) {
         this.itemID = itemID;
     }
 }
