@@ -12,4 +12,11 @@
         <exec.mainClass>shippingSubsystem.Group7Project_GUI</exec.mainClass>
     </properties>
     <name>Group7ProjectGUI</name>
+    <dependencies>
+        <dependency>
+            <groupId>group.id</groupId>
+            <artifactId>artifact.id</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

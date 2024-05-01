@@ -12,6 +12,8 @@ public class Group7Project_GUI {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        new MainMenu().setVisible(true);
+        new LoginMenu().setVisible(true);
+         
+        
     }
 }
