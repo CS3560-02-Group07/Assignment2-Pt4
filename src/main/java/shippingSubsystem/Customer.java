@@ -4,11 +4,11 @@ public class Customer {
 	// Attributes of Customer class
 	private int customerID;
 	private String name;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String emailAddress;
 	
 	// Customer constructor
-	public Customer(int customerID, String name, int phoneNumber, String emailAddress) {
+	public Customer(int customerID, String name, String phoneNumber, String emailAddress) {
 		this.customerID = customerID;
 		this.name = name;
 		this.phoneNumber = phoneNumber;
@@ -33,11 +33,11 @@ public class Customer {
 		this.name = name;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

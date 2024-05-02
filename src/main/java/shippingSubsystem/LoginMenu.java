@@ -260,7 +260,7 @@ public class LoginMenu extends javax.swing.JFrame {
                 
                 System.out.println(rs.getInt(1) + rs.getString(2) + rs.getString(3)
                 + rs.getString(4) + rs.getString(5));
-                Customer newCustomer = new Customer(rs.getInt(1),rs.getString(2),Integer.parseInt(rs.getString(4)),rs.getString(5));
+                Customer newCustomer = new Customer(rs.getInt(1),rs.getString(2),rs.getString(4),rs.getString(5));
                 
         
                 new CustomerMenu(newCustomer).setVisible(true);
