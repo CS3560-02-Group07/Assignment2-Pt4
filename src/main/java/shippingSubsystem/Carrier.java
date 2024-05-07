@@ -2,6 +2,7 @@ package shippingSubsystem;
 
 public class Carrier {
 	// Attributes of Carrier class class
+    
 	private int carrierID;
 	private int phoneNumber;
 	private String emailAddress;

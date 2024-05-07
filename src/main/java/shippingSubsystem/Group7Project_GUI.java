@@ -15,5 +15,6 @@ public class Group7Project_GUI {
         new LoginMenu().setVisible(true);
          
         
+        
     }
 }

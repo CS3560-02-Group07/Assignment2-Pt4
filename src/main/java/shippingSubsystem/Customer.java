@@ -39,6 +39,7 @@ public class Customer {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+                
 	}
 
 	public String getEmailAddress() {

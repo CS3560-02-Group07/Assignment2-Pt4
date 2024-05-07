@@ -22,6 +22,7 @@ public class PickupLocation {
 	}
 	
 	// Getters and setters for PickupLocation class attributes
+        
 	public Integer getWarehouseID() {
 		return warehouseID;
 	}

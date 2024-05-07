@@ -19,6 +19,7 @@ public class Shipment {
 	}
 	
 	// Getters and setters for Shipment class attributes
+        
 	public int getShipmentID() {
 		return shipmentID;
 	}

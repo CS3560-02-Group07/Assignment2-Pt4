@@ -21,6 +21,7 @@ public class SaleLineItem {
     }
 
     // Getter and setter methods
+    
     public int getQuantity() {
         return quantity;
     }

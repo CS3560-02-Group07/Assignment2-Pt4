@@ -23,6 +23,7 @@ public class ProductItem {
 	}
 	
 	// Getters and setters for ProductItemClass attributes
+        
 	public int getItemID() {
 		return itemID;
 	}

@@ -20,6 +20,7 @@ public class Sale {
 	}
 
 	// Getters and setters for Sale class attributes
+        
 	public int getOrderNumber() {
 		return orderNumber;
 	}
