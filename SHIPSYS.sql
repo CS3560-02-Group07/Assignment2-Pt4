@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS Manufacturer (
 CREATE TABLE IF NOT EXISTS ShippingMethod (
 	shipID INT,
     shipMethod VARCHAR(15),
+    cost INT, 
     PRIMARY KEY (shipID)
 );
 
@@ -128,3 +129,7 @@ INSERT INTO ProductItem VALUES ('300001', 'Aqua Flask 32 oz', 'water bottle', 'S
                                 ('300003', 'PacBook Oxygen', 'laptop', 'Supercharged by the next-gen N2 chip, the redesign combines incredible performance and up to 19 hours of battery life.', '100002', 'available'),
                                 ('300004', 'Breeze Michaels', 'tennis shoes', 'The Breeze Michael remakes the classic sneaker, giving you a fresh look with a familiar feel.', '100001', 'available'),
                                 ('300005', 'BBQ Grill', 'cookware', 'With smoker and charcoal grill, you can experience grilled and smoked meats at the same time.', '100003', 'available');
+#Ignore these
+ALTER TABLE customer 
+ALTER customerID SET DEFAULT 1; 
+ALTER TABLE customer AUTO_INCREMENT = 1
