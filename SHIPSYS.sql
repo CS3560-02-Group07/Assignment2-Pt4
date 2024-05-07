@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Manufacturer (
 
 CREATE TABLE IF NOT EXISTS ShippingMethod (
 	shipID INT,
-    shipMethod VARCHAR(15),
+    shipMethod VARCHAR(25),
     cost INT, 
     PRIMARY KEY (shipID)
 );
