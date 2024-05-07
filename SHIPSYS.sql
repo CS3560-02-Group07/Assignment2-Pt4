@@ -115,6 +115,11 @@ INSERT INTO Customer VALUES (000405, 'John', 'Benson', '123-123-1234', 'JBenson@
                             (000505, 'Jane', 'Rhodes', '909-394-8003', 'JaRhodes@email.com'),
                             (003006, 'Adam', 'James', '838-943-3902', 'AdamJames@email.com');
 
+INSERT INTO Employee VALUES (00001, 'Dylan', 'Smith', '847-561-4448', 'dsmith@gmail.com'),
+							(00002, 'Jack', 'Brown', '777-111-8181', 'JBrown@gmail.com'),
+			(00003, 'Dave', 'Jones', '616-818-4321', 'DaveJones@outlook.com'),
+			(00004, 'Mary', 'Wilson', '906-500-2000', 'MWilson@icloud.com');
+
 INSERT INTO CustomerAddress VALUES (000840, 000405, 'Isabelle Ave', 'Eugene', 'OR', '12345', 'United States'),
 									(000120, 002002, 'Riverview Ct', 'Tacoma', 'WA', '54321', 'United States'),
                                     (000021, 002003, 'Country Club St', 'Sacramento', 'CA', '24315', 'United States'),
