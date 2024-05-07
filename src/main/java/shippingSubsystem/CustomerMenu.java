@@ -815,6 +815,7 @@ public class CustomerMenu extends javax.swing.JFrame {
             Statement s =  DataBase.myCon().createStatement(); 
             s.executeUpdate(" INSERT INTO Sale (customerID,shipID,saleDate,saleTime,tax,shippingCost,itemTotal)"
                     + "VALUES('"+currentCustomer.getCustomerID()+"','"+shipID+"','"+java.time.LocalDate.now()+"','"+java.time.LocalTime.now()+"','"+5+"','"+shippingCost+"','"+5+shippingCost+"') ");
+            s.executeUpdate("ALTER TABLE Sale AUTO_INCREMENT=1;"); 
         }catch(Exception e){
             System.out.println(e);
         }
