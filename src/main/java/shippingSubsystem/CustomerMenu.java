@@ -11,6 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import java.time.LocalDateTime;  
+import java.time.format.DateTimeFormatter;  
 
 /**
  *
@@ -24,7 +26,10 @@ public class CustomerMenu extends javax.swing.JFrame {
     Connection con = null; 
     ResultSet rs = null; 
     Customer currentCustomer; 
+    double shippingCost = 0; 
     int items = 0; 
+    int id; 
+    int shipID; 
     public CustomerMenu() {
         initComponents();
         jButton3.setVisible(false);
@@ -327,6 +332,11 @@ public class CustomerMenu extends javax.swing.JFrame {
         jLabel16.setText("Customer Info");
 
         jButton9.setText("Pay");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         productName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         productName.setForeground(new java.awt.Color(0, 51, 255));
@@ -405,9 +415,9 @@ public class CustomerMenu extends javax.swing.JFrame {
             SelectShippingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SelectShippingLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(SelectShippingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel15))
+                .addGroup(SelectShippingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel16))
                 .addGroup(SelectShippingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SelectShippingLayout.createSequentialGroup()
                         .addGroup(SelectShippingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -761,7 +771,7 @@ public class CustomerMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int row;
-        int id; 
+        
         row = jTable1.getSelectedRow(); 
         id = Integer.parseInt(jTable1.getValueAt(row, 0).toString()); 
         
@@ -772,13 +782,43 @@ public class CustomerMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+        int choice = jComboBox1.getSelectedIndex(); 
+        
+        switch(choice){
+            case 1: 
+                shippingCost = 12.50;
+                shipID = 0;
+                break; 
+            case 2: 
+                shippingCost = 9.50;
+                shipID = 1;
+                break; 
+            case 3: 
+                shippingCost = 6.50;
+                shipID = 2;
+                break; 
+            case 4: 
+                shippingCost = 1.50;
+                shipID = 3;
+                break; 
+        }
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         SelectShipping.setVisible(false);
         jPanel2.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        try{
+            Statement s =  DataBase.myCon().createStatement(); 
+            s.executeUpdate(" INSERT INTO Sale (customerID,shipID,saleDate,saleTime,tax,shippingCost,itemTotal)"
+                    + "VALUES('"+currentCustomer.getCustomerID()+"','"+shipID+"','"+java.time.LocalDate.now()+"','"+java.time.LocalTime.now()+"','"+5+"','"+shippingCost+"','"+5+shippingCost+"') ");
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
