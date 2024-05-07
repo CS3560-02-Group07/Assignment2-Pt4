@@ -10,6 +10,15 @@ CREATE TABLE IF NOT EXISTS Customer (
     PRIMARY KEY (customerID)
 );
 
+CREATE TABLE IF NOT EXISTS Employee (
+	employeeID INT, 
+	empf_name VARCHAR (15),
+	empl_name VARCHAR (15),
+	empPhoneNo VARCHAR (13),
+	empEmailAdd VARCHAR (30),
+	PRIMARY KEY (employeeID)
+);
+
 CREATE TABLE IF NOT EXISTS CustomerAddress (
 	addressID INT,
     customerID INT,
