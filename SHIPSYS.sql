@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS ShippingMethod (
 );
 
 CREATE TABLE IF NOT EXISTS Sale (
-	orderNumber INT,
+	orderNumber INT AUTO_INCREMENT,
     customerID INT,
     shipID INT,
     saleDate DATE,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS SaleLineItem (
 );
 
 CREATE TABLE IF NOT EXISTS Package (
-	packageID INT,
+	packageID INT AUTO_INCREMENT,
     orderNumber INT,
     trackingNumber INT,
     size INT,
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS Package (
 );
 
 CREATE TABLE IF NOT EXISTS PickupLocation (
-	warehouseID INT,
+	warehouseID INT AUTO_INCREMENT,
     manufacturerID INT,
     PRIMARY KEY (warehouseID),
     street VARCHAR(20),
