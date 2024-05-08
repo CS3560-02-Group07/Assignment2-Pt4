@@ -87,12 +87,15 @@ CREATE TABLE IF NOT EXISTS SaleLineItem (
 CREATE TABLE IF NOT EXISTS Package (
 	packageID INT AUTO_INCREMENT,
     orderNumber INT,
+	employeeID INT,
     trackingNumber INT,
     size INT,
     weight INT,
 	PRIMARY KEY (packageID),
     FOREIGN KEY (orderNumber)
-		REFERENCES Sale (orderNumber)
+		REFERENCES Sale (orderNumber),
+	FOREIGN KEY (employeeID)
+		REFERENCES Employee (employeeID)
 );
 
 CREATE TABLE IF NOT EXISTS PickupLocation (
