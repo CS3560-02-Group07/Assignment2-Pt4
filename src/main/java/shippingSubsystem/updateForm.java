@@ -15,6 +15,8 @@ public class updateForm extends javax.swing.JFrame {
     /**
      * Creates new form updateForm
      */
+    //SELECT COUNT(ProductID) AS NumberOfProducts FROM Products;
+
     public updateForm() {
         initComponents();
     }

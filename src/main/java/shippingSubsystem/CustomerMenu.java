@@ -23,6 +23,8 @@ public class CustomerMenu extends javax.swing.JFrame {
     /**
      * Creates new form Customer
      */
+    int productID; 
+    int thisid; 
     Connection con = null; 
     ResultSet rs = null; 
     Customer currentCustomer; 
@@ -32,7 +34,7 @@ public class CustomerMenu extends javax.swing.JFrame {
     int shipID; 
     public CustomerMenu() {
         initComponents();
-        jButton3.setVisible(false);
+        
         jButton4.setVisible(false);
     }
 
@@ -59,8 +61,13 @@ public class CustomerMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jFormattedTextField3 = new javax.swing.JFormattedTextField();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -132,14 +139,6 @@ public class CustomerMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setText("Request Refund");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setText("Cancel Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +146,24 @@ public class CustomerMenu extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel21.setText("Item: ");
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel22.setText("Date of Purchase: ");
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel23.setText("Cost: ");
+
+        jLabel24.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel24.setText("Product");
+
+        jLabel25.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel25.setText("date");
+
+        jLabel26.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel26.setText("cost");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -157,32 +174,51 @@ public class CustomerMenu extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jLabel23))
+                                .addGap(51, 51, 51)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 189, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31))))
+                .addGap(27, 27, 27)
+                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel24))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         jTabbedPane1.addTab("Manage Orders ", jPanel1);
@@ -657,18 +693,6 @@ public class CustomerMenu extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField3ActionPerformed
-        
-    }//GEN-LAST:event_jFormattedTextField3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        //jButton4.add(jPopupMenu1);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         new LoginMenu().setVisible(true);
         dispose(); 
@@ -738,11 +762,11 @@ public class CustomerMenu extends javax.swing.JFrame {
                 counLabel.setText(rs.getString(7));
             }
         int row;
-        int id; 
-        row = jTable1.getSelectedRow(); 
-        id = Integer.parseInt(jTable1.getValueAt(row, 0).toString()); 
         
-        sql = "select * from ProductItem where itemID='"+id+"'";
+        row = jTable1.getSelectedRow(); 
+        productID = Integer.parseInt(jTable1.getValueAt(row, 0).toString()); 
+        
+        sql = "select * from ProductItem where itemID='"+productID+"'";
         
         rs = stm.executeQuery(sql);
         
@@ -811,15 +835,128 @@ public class CustomerMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        int orderNumber = -1;
         try{
             Statement s =  DataBase.myCon().createStatement(); 
             s.executeUpdate(" INSERT INTO Sale (customerID,shipID,saleDate,saleTime,tax,shippingCost,itemTotal)"
                     + "VALUES('"+currentCustomer.getCustomerID()+"','"+shipID+"','"+java.time.LocalDate.now()+"','"+java.time.LocalTime.now()+"','"+5+"','"+shippingCost+"','"+5+shippingCost+"') ");
             s.executeUpdate("ALTER TABLE Sale AUTO_INCREMENT=1;"); 
+            
+            
+            
+            
+            String sql = "select * from Sale where shipID='"+shipID+"'and customerID='"+currentCustomer.getCustomerID()+"'";
+            
+            rs = s.executeQuery(sql);
+            
+            if(rs.next()){
+                orderNumber = rs.getInt(1); 
+                
+                s.executeUpdate(" INSERT INTO SaleLineItem (orderNumber, ItemID, quantity)"
+                    + "VALUES('"+orderNumber+"','"+productID+"','"+1+"')");
+                
+            }
+            
+            JOptionPane.showMessageDialog(this, "Sale completed, Order number is: " + orderNumber);
+            
+            
         }catch(Exception e){
             System.out.println(e);
         }
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int input = JOptionPane.showConfirmDialog(this, "Are you sure you want to cancel?");
+        
+        System.out.println("input = " + input);
+        
+        if(input == 0){
+             boolean delete = false;
+        
+        try{
+            Statement stm = con.createStatement();
+            
+            
+            String sql = "DELETE FROM SaleLineItem WHERE orderNumber='"+Integer.valueOf(jFormattedTextField3.getText())+"'";
+             int i = stm.executeUpdate(sql);
+        
+
+             sql = "DELETE FROM Sale WHERE orderNumber='"+Integer.valueOf(jFormattedTextField3.getText())+"'";
+             i = stm.executeUpdate(sql);
+            
+             
+            
+            delete = true; 
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
+        if(delete){
+            JOptionPane.showMessageDialog(this, "Sale Canceled :(");
+            
+        }
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField3ActionPerformed
+
+        int order = Integer.valueOf(jFormattedTextField3.getText());
+        boolean goNext = false; 
+        
+
+        try{
+            Statement stm = con.createStatement();
+
+            String sql = "select * from Sale where orderNumber='"+order+"'and customerID='"+currentCustomer.getCustomerID()+"'";
+
+            rs = stm.executeQuery(sql);
+
+            if(rs.next()){
+                   jLabel25.setText(rs.getString(4) + " : " + rs.getString(5));
+                   jLabel26.setText(rs.getString(8)); 
+                   goNext = true; 
+            }
+            
+            else{
+                JOptionPane.showMessageDialog(this, "No order found");
+                jFormattedTextField3.setText(""); 
+                jLabel24.setText("");
+                jLabel25.setText("");
+                jLabel26.setText("");
+                jButton4.setVisible(false);
+            }
+            
+             sql = "select * from SaleLineItem where orderNumber='"+order+"'";
+             
+             rs=stm.executeQuery(sql); 
+             
+             if(rs.next() && goNext){
+                 thisid = rs.getInt(2);
+                 System.out.println(id);
+             }
+             
+             sql = "select * from productItem where itemID='"+thisid+"'";
+             
+             rs = stm.executeQuery(sql); 
+             
+             if(rs.next()&& goNext){
+                 System.out.println(rs.getString(2));
+                 jLabel24.setText(rs.getString(2));
+                 jButton4.setVisible(true);
+             }
+             
+             
+
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "No order found");
+            jLabel24.setText("");
+            jLabel25.setText("");
+            jLabel26.setText("");
+            jButton4.setVisible(false);
+        }
+
+    }//GEN-LAST:event_jFormattedTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -885,7 +1022,6 @@ public class CustomerMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -908,6 +1044,12 @@ public class CustomerMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
